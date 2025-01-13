@@ -8,8 +8,8 @@ test('sets the page title', async ({ page }) => {
 })
 
 test('logs the correct values', async ({ page }) => {
-  const errors = []
-  const logs = []
+  const errors: string[] = []
+  const logs: string[] = []
 
   page.on('console', (message) => {
     logs.push(message.text())
@@ -26,7 +26,7 @@ test('logs the correct values', async ({ page }) => {
   if (isBuild) {
     expect(logs).toEqual([
       'class Symbol {\n    }',
-      '{Volume: , vol: Volume, createFsFromVolume: , fs: Object, memfs: }',
+      '{Volume: , vol: Volume, fs: Object, memfs: , createFsFromVolume: }',
       'function fetch() { [native code] }',
       '/',
       '{nextTick: , title: browser, browser: true, env: Object, argv: Array(0)}',
@@ -45,7 +45,7 @@ test('logs the correct values', async ({ page }) => {
       '[vite] connecting...',
       '[vite] connected.',
       'class Symbol {\n}',
-      '{Volume: , vol: _Volume, createFsFromVolume: , fs: Object, memfs: }',
+      '{Volume: , vol: _Volume, fs: Object, memfs: , createFsFromVolume: }',
       'function fetch() { [native code] }',
       '/',
       '{nextTick: , title: browser, browser: true, env: Object, argv: Array(0)}',
