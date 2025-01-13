@@ -1,8 +1,8 @@
 import { createRequire } from 'node:module'
 import inject from '@rollup/plugin-inject'
 import stdLibBrowser from 'node-stdlib-browser'
-import { handleCircularDependancyWarning } from 'node-stdlib-browser/helpers/rollup/plugin'
 import esbuildPlugin from 'node-stdlib-browser/helpers/esbuild/plugin'
+import { handleCircularDependancyWarning } from 'node-stdlib-browser/helpers/rollup/plugin'
 import type { Plugin } from 'vite'
 import { compareModuleNames, isEnabled, isNodeProtocolImport, toRegExp, withoutNodeProtocol } from './utils'
 

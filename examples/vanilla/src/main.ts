@@ -1,8 +1,8 @@
 /* eslint-disable no-console */
 import { Buffer } from 'node:buffer'
+import fs, { readFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 import process from 'node:process'
-import fs, { readFileSync } from 'node:fs'
 import { cloneDeep } from 'lodash-es'
 import { fetch } from 'ohmyfetch'
 
